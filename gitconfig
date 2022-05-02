@@ -51,4 +51,9 @@
   rebase = false
 [user]
 	email = christophe126@gmail.com
-	name = Christophe TECHER
+	name = christophe126
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
